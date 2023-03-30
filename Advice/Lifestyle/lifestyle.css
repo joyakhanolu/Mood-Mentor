@@ -1,0 +1,66 @@
+.back-button {
+    position: absolute;
+    margin: 0.5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: black;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  
+  
+  /* Main content styling */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("Life.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    color: black;
+  }
+  
+  button {
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin-left: 45%;
+    margin-top: 50px;
+  }
+  
+  button:hover {
+    background-color: papayawhip;
+    color: black;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  p#activity {
+    font-size: 20px;
+    margin: 50px auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+  }
+  
+  

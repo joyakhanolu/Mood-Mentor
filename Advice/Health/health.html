@@ -4,15 +4,25 @@
     <meta charset="UTF-8">
     <meta name="author" content="Ryan Els">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playing fetch() with my API</title>
+    <title>Jokes</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+
+        body {
+            background-image: url("Jokes.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
         
         h1 {
-            font-size: 25px;
+            font-size: 50px;
+            padding-top: 30px;
+            padding-bottom: 20px;
         }
         h2 {
-            font-size:20px;
+            font-size:25px;
         }
         pre {
             margin:0;
@@ -21,17 +31,30 @@
             overflow:auto;
             padding:10px;
         }
-        button {
-            width:90%;
-            margin:auto;
+
+        button:hover {
+            background-color: black;
         }
 
-        /*
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            cursor: pointer;
+            
+        }
+
+        
         .back-button {
   position: absolute;
   font-size: 10px;
-  color: white;
-  background-color: #333;
+  color: black;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -49,7 +72,7 @@
 */
 
 .w3-container {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -57,16 +80,23 @@
     text-align: center;
 }
 
+.text {
+    color:black;
+    top: 300px;
+    text-size-adjust: 10px;
+    padding-top: 20px;
+}
+
     </style>
 </head>
 
     <button class="back-button">&#8592;</button>
 
-     <h1 class="w3-center">It's Jokes' Time!</h1>
+     <h1 class="w3-center"> Joke Time!</h1>
 
 
 
-    <h2 class="w3-center" id="demo">Let's Go!!!!</h2>
+    <h2 class="w3-center">Let's Go!!!!</h2>
 
     <div class="w3-container text-center">
         <p>
@@ -87,13 +117,14 @@
         <button class="w3-button w3-green button">Fetch Joke</button>
     </div>
 
+    
     <div class="w3-center">
         <img src="http://toonsup.com/users/b/belugatoons/laughing_pup_110525_203924.gif" class="w3-image w3-hide gif" style="max-width:40%">
     </div>
     
    
    <div class="w3-container">
-        <p class="w3-small w3-center">Disclaimer: I am not responsible for the content of these jokes. You can blame the API.</p>
+        <p class="w3-small w3-center text">Disclaimer: I am not responsible for the content of these jokes. You can blame the API.</p>
     </div>
     
 <script>
