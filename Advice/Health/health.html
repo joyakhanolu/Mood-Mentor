@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Ryan Els">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing fetch() with my API</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        
+        h1 {
+            font-size: 25px;
+        }
+        h2 {
+            font-size:20px;
+        }
+        pre {
+            margin:0;
+        }
+        .code {
+            overflow:auto;
+            padding:10px;
+        }
+        button {
+            width:90%;
+            margin:auto;
+        }
+
+        .back-button {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px;
+  left: 0;
+  top: 0;
+  right: 10000%;
+}
+
+
+.back-button:hover {
+  background-color: #555;
+}
+
+    </style>
+</head>
+
+    <button class="back-button">&#8592;</button>
+
+     <h1 class="w3-center">Playing fetch() with my API</h1>
+
+
+
+    <h2 class="w3-center" id="demo">Working Demo</h2>
+
+    <div class="w3-container">
+        <p>And here is our completed example. If you made it this far I hope you learned something. Click on the button and enjoy the jokes.</p>
+    </div>
+
+    <div class="w3-container">
+        <div class="w3-card-4 w3-code" id="jokeDisplay">
+            <p>...I am fetching a joke.</p>
+        </div>  
+    </div>
+
+    <br>
+    <div class="w3-center">
+        <button class="w3-button w3-green button">API Fetch Joke</button>
+    </div>
+
+    <div class="w3-center">
+        <img src="http://toonsup.com/users/b/belugatoons/laughing_pup_110525_203924.gif" class="w3-image w3-hide gif" style="max-width:40%">
+    </div>
+    
+   
+   <div class="w3-container">
+        <p class="w3-small w3-center">Disclaimer: I am not responsible for the content of these jokes. You can blame the API.</p>
+    </div>
+    
+<script>
+const jokes = 'https://sv443.net/jokeapi/v2/joke/programming';
+const btn = document.querySelector('.button');
+btn.onclick = () => {
+    document.querySelector('.gif').classList.remove('w3-hide');
+    fetch(jokes)
+        .then(response => response.json())
+        .then(data => {
+            
+            if (data.type  == 'single'){
+                document.getElementById('jokeDisplay').innerHTML = `
+                    <p>${data.joke}</p>
+                    `;
+            }
+            if (data.type == 'twopart'){
+                document.getElementById('jokeDisplay').innerHTML = `
+                    <p>${data.setup}</p>
+                    <p>${data.delivery}</p>
+                    `;
+            }
+        })
+        .catch(error => {
+            throw new Error(data.error_message);
+    });
+}
+
+const backButton = document.querySelector('.back-button');
+    backButton.addEventListener('click', function() {
+        history.back();
+    });
+    </script>
+</body>
+</html>
