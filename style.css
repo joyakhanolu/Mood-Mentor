@@ -298,6 +298,40 @@ h2 {
     border-radius: 5px;
   }
 
+  .connect {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+  }
+  .connect a {
+    margin: 0 10px;
+  }
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .connect a:hover {
+    transform: scale(1.1);
+  }
+
+  #contact {
+    background-color: black;
+    padding: 50px;
+    text-align: center;
+  }
+
+  #contact h1{
+    text-align: center;
+    color: white;
+  }
+
+  #contact p {
+    text-align: center;
+    color: white;
+  }
+
   footer {
     left: 0;
     bottom: 0;
