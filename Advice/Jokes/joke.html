@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Joy Akhanolu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokes</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+
+        body {
+            padding-top: 230px;
+            background-image: url("Joke.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+        
+        h1 {
+            position: fixed;
+            text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+            /*
+            font-size: 50px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            */
+        }
+        h2 {
+            font-size:25px;
+        }
+        pre {
+            margin:0;
+        }
+        .code {
+            overflow:auto;
+            padding:10px;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+
+        .button {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            
+            cursor: pointer;
+            
+        }
+
+        
+        .back-button {
+  position: absolute;
+  font-size: 10px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 2px;
+  left: 0;
+  top: 0;
+  right: 10000%;
+}
+
+
+.back-button:hover {
+  background-color: #555;
+}
+
+*/
+
+.w3-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: left;
+    float: left;
+}
+
+
+.text {
+    color:black;
+    top: 300px;
+    text-size-adjust: 10px;
+    padding-top: 20px;
+}
+
+    </style>
+</head>
+
+    <button class="back-button">&#8592;</button>
+
+     <h1 class="w3-center"> Joke Time!</h1>
+
+
+
+    <h2 class="w3-center">Let's Go!!!!</h2>
+
+    <div class="w3-container text-center">
+        <p>
+            Reading random jokes can be an effective way to distract oneself from the stress and pressures of everyday life. 
+            Laughter has been shown to have numerous health benefits, including reducing stress and anxiety, improving mood, and boosting the immune system.<br>
+            Additionally, reading jokes can provide a momentary escape from negative thoughts and emotions, allowing the mind to relax and recharge. 
+            So if you're feeling overwhelmed or just need a quick pick-me-up, taking a few minutes to read some jokes which can be a fun and healthy way to brighten your day.</p>
+    </div>
+
+    <div class="w3-container">
+        <div class="w3-card-4 w3-code" id="jokeDisplay">
+            <p>...Let's Fetch</p>
+        </div>  
+    </div>
+
+    <br>
+    <div class="w3-center">
+        <button class="w3-button w3-green button">Fetch Joke</button>
+    </div>
+
+    
+    <div class="w3-center">
+        <img src="http://toonsup.com/users/b/belugatoons/laughing_pup_110525_203924.gif" class="w3-image w3-hide gif" style="max-width:40%">
+    </div>
+    
+   
+   <div class="w3-container">
+        <p class="w3-small w3-center text">Disclaimer: I am not responsible for the content of these jokes. You can blame the API.</p>
+    </div>
+    
+<script>
+const jokes = 'https://sv443.net/jokeapi/v2/joke/programming';
+const btn = document.querySelector('.button');
+btn.onclick = () => {
+    document.querySelector('.gif').classList.remove('w3-hide');
+    fetch(jokes)
+        .then(response => response.json())
+        .then(data => {
+            
+            if (data.type  == 'single'){
+                document.getElementById('jokeDisplay').innerHTML = `
+                    <p>${data.joke}</p>
+                    `;
+            }
+            if (data.type == 'twopart'){
+                document.getElementById('jokeDisplay').innerHTML = `
+                    <p>${data.setup}</p>
+                    <p>${data.delivery}</p>
+                    `;
+            }
+        })
+        .catch(error => {
+            throw new Error(data.error_message);
+    });
+}
+
+const backButton = document.querySelector('.back-button');
+    backButton.addEventListener('click', function() {
+        history.back();
+    });
+    </script>
+</body>
+</html>
