@@ -38,23 +38,47 @@
 
     h1 {
       text-align: center;
+      color: white;
+      text-decoration: underline;
+      text-decoration-color: teal;
+
     }
 
+    .container-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
     .container {
-  position: relative;
-  width: 50%;
+  
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    margin: 0 10px;
+    text-align: center;
 }
 
 .image {
+  width: 100%;
+    max-width: 200px;
+    height: auto;
+  /*
   opacity: 1;
   display: block;
   width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden;
+  */
 }
 
 .middle {
+position: absolute;
+text-align: center;
+  /*
   transition: .5s ease;
   opacity: 0;
   position: absolute;
@@ -63,6 +87,8 @@
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   text-align: center;
+  */
+
 }
 
 .container:hover .image {
@@ -74,21 +100,42 @@
 }
 
 .text {
-  background-color: lightslategray;
-  color: black;
-  font-size: 16px;
-  padding: 16px 32px;
+  color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-    
+  div h2 {
+    color: white;
+  }
 
   </style>
 </head>
 <body>
   <h1>Advice Page</h1>
 
+  <div>
+    <h2>jkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhi jkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhi
+      jkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhijkfjs jshhis shihsi sihdhihsd ihishihsdi isihdihd hdhoidi
+      dihdhidid ijdihidhi
+    </h2>
+  </div>
 
 
+<div class="container-wrapper">
 <div class="container">
   <img src="./Jokes/Jokes.jpg" alt="Avatar" class="image" style="width:100%">
   <div class="middle">
@@ -109,6 +156,30 @@
     <div class="middle">
      <a href="./Lifestyle/lifestyle.html"><div class="text">Lifestyle</div></a> 
     </div>
+  </div>
+
+  <br>
+  <div class="container">
+    <img src="./Jokes/Jokes.jpg" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+     <a href="./Lifestyle/lifestyle.html"><div class="text">Lifestyle</div></a> 
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="./Jokes/Jokes.jpg" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+     <a href="./Lifestyle/lifestyle.html"><div class="text">Lifestyle</div></a> 
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="./Jokes/Jokes.jpg" alt="Avatar" class="image" style="width:100%">
+    <div class="middle">
+     <a href="./Lifestyle/lifestyle.html"><div class="text">Lifestyle</div></a> 
+    </div>
+  </div>
+  
   </div>
 
   <!-----
