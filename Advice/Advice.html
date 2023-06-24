@@ -1,3 +1,5 @@
+<!----
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -181,56 +183,26 @@ text-align: center;
   </div>
   
   </div>
+  --->
 
-  <!-----
-
-  <div class="advice-container">
-    
-    <div class="advice-item1">
-     <a href="./Random/random.html"> <h2>Random Advice</h2></a>
-      <p>This entails random advices.</p>
-
-    <div class="advice-item2">
-      <a href="./Jokes/joke.html"><h2>Jokes</h2></a>
-      <p>Just jokes</p>
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>Advices</title>
+    <link rel="stylesheet" href="Advice.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Advice</h1>
+    </header>
+    <div class="gallery">
+      <img src="pen.jpg" alt="Advice1" />
+      <img src="pen.jpg" alt="Advice1" />
+      <img src="pen.jpg" alt="Advice1" />
+      <img src="pen.jpg" alt="Advice1" />
+      <img src="pen.jpg" alt="Advice1" />
     </div>
-
-    <div class="advice-item3">
-      <a href="./Lifestyle/lifestyle.html"><h2>Lifestyle</h2></a>
-      <p>lifstyle</p>
-    </div>
-
-  </div>
-
-  ------>
-
-  <!----
-
-  <script>
-    // JavaScript code for fetching advice data from an array
-    // Modify this code to fetch data from an API or JSON file
-
-    // Sample advice data
-    const adviceData = [
-      { title: "Random Advice", content: "This entails random advice" },
-      { title: "Advice 2", content: "Nulla facilisi. Aenean eu ultrices urna, vitae molestie elit." },
-      { title: "Advice 3", content: "Vivamus iaculis auctor dui, vitae ultrices nunc efficitur a." }
-      // Add more advice items here
-    ];
-
-    // Generate HTML for advice items
-    const adviceContainer = document.querySelector('.advice-container');
-    adviceData.forEach(advice => {
-      const adviceItem = document.createElement('div');
-      adviceItem.classList.add('advice-item');
-      adviceItem.innerHTML = `
-        <h2>${advice.title}</h2>
-        <p>${advice.content}</p>
-      `;
-      adviceContainer.appendChild(adviceItem);
-    });
-  </script>
-
-  ---->
-</body>
+  </body>
 </html>
